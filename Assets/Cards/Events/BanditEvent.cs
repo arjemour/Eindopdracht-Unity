@@ -13,7 +13,9 @@ public class BanditEvent : CardEvent
 
     public BanditEvent()
     {
-        ChoiceText = "While traveling in the woods you see a wooden cart blocking the road and some people around it.";
+        ChoiceText = "While traveling in the woods you see a wooden cart blocking the road with some people around it." +
+                     "You can't make out whats wrong with the cart from this distance. " +
+                     "You can go to the cart and offer help or take a closer look.";
         ChoiceButton1Text = "Go to the cart and offer you're help";
         ChoiceButton2Text = "Take a closer look at the cart and the people";
         ChoiceButton3Text = "";
@@ -36,7 +38,7 @@ public class BanditEvent : CardEvent
                 " \"This is a tax road, you can safely pass for 5 gold pieces.\" Says one of the bandits";
             ChoiceButton1Text = "Draw you're sword and try to defend yourself";
             ChoiceButton2Text = "Pay the \"Tax\" of 5 gold";
-            ChoiceButton3Text = "Try to run past the bandits to safety";
+            ChoiceButton3Text = "Try to run through the blockade and bandits to safety";
             Card.GameManager.CanvasManager.ShowChoiceTextScreen(this);
             _phase1 = false;
             _phase2 = true;
@@ -93,7 +95,7 @@ public class BanditEvent : CardEvent
             {
                 string text = "You decide to pay the \"tax\" but you realize you don't have enough money." +
                               "You try to explain this to the bandits but suddenly you get knocked out." +
-                              "When you awake al of you're gold and some supplies are gone";
+                              "When you awake all of you're gold and some supplies are gone";
                 PlayerStats.Gold = 0;
                 PlayerStats.Health -= 2;
                 PlayerStats.Supplies -= 3;

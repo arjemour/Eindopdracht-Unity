@@ -17,7 +17,8 @@ public class LevelManager
             "CartEvent",
             "BanditEvent",
             "InnEvent",
-            "RiverEvent"
+            "RiverEvent",
+            "TowerEvent"
         };
     }
 
@@ -67,8 +68,8 @@ public class LevelManager
                     case "C":
                         GameObject card = Object.Instantiate(gCard, new Vector3(startX, startY, 0), Quaternion.identity);
                         Card cardScript = card.GetComponent<Card>();
-                        //cardScript.CardEvent = Activator.CreateInstance(Type.GetType(_events[UnityEngine.Random.Range(0, _events.Count)]), cardScript) as CardEvent;
-                        cardScript.CardEvent = new RiverEvent();
+                        cardScript.CardEvent = Activator.CreateInstance(Type.GetType(_events[UnityEngine.Random.Range(0, _events.Count)]), cardScript) as CardEvent;
+                        //cardScript.CardEvent = new TowerEvent();
                         cardScript.CardEvent.Card = cardScript;
                         cardScript.Turned = false;
                         cardScript.XPos = j;

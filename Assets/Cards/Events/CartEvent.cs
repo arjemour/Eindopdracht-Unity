@@ -9,9 +9,11 @@ public class CartEvent : CardEvent
 
     public CartEvent()
     {
-        ChoiceText = "While traveling in the woods you see a wooden cart blocking the road and some people around it.";
+        ChoiceText = "While traveling in the woods you see a wooden cart blocking the road with some people around it." +
+                     "You can't make out whats wrong with the cart from this distance. " +
+                     "You can go to the cart and offer help or take ignore the cart and go on with the journey.";
         ChoiceButton1Text = "Go to the cart and offer you're help";
-        ChoiceButton2Text = "Ignore the cart and the people";
+        ChoiceButton2Text = "Pass the cart and the people and go on with the journey";
         ChoiceButton3Text = "";
         SpriteName = "cart";
 

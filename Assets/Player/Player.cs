@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     {
         PlayerStats.Health = 15;
         PlayerStats.Gold = 15;
-        PlayerStats.Supplies = 2;
+        PlayerStats.Supplies = 15;
     }
 
     private void Update()
